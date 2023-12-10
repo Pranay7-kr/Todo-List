@@ -1,0 +1,118 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+	box-sizing: border-box;
+	font-size: 1rem;
+}
+
+.container{
+	width: 100%px;
+	min-height: 100vh;
+	background-image: url(todo.jpg);
+	background-size: contain;
+	padding: 10px;
+
+}
+
+.todo{
+	width: 100%;
+	max-width: 500px;
+	background-color: white;
+	margin: 100px auto 60px;
+	padding: 40px 30px 70px;
+	border-radius: 10px;
+}
+
+.todo h2{
+	color: #002765;
+	display: flex;
+	align-items: center;
+	
+	margin-bottom: 25px;
+
+}
+
+.todo h2 img{
+	width: 30px;
+	margin-left: 10px;
+}
+
+.search{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background: cyan;
+	border-radius: 30px;
+	padding-left: 20px;
+	margin-bottom: 25px;
+}
+
+input{
+	flex: 1;
+	border: none;
+	outline: none;
+	padding: 10px;
+	background: transparent;
+}
+button{
+	border: none;
+	outline: none;
+	padding: 16px 16px;
+	border-radius: 30px;
+	background-color: cyan;
+	font-size: 16px;
+	cursor: pointer;
+
+}
+
+ul li{
+	list-style: none;
+	font-size: 1.1rem;
+	padding: 10px 7px 10px 30px;
+	user-select: none;
+	cursor: pointer;
+	position: relative;
+}
+
+ul li::before{
+	content: '';
+	position: absolute;
+	height: 28px;
+	width: 28px;
+	border-radius: 50%;
+	background-image: url(unchecked.png);
+	background-size: cover;
+	background-position: center;
+	top: 7px;
+	left: -4px;
+}
+
+
+ul li.marked{
+	color: red;
+	text-decoration: line-through;
+}
+
+ul li.marked::before{
+	background-image: url(checked.png);
+}
+
+ul li del{
+	text-decoration: none;
+	position: absolute;
+	right: 0;
+	top: 1px;
+	width: 40px;
+	height: 40px;
+	font-size: 20px;
+	line-height: 40px;
+	text-align: center;
+	border-radius: 50%;
+}
+
+ul li del:hover{
+	background-color: #edeef0;
+}
+
+
